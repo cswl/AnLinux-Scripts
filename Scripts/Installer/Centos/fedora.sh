@@ -1,10 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
-folder=fedora-fs
+folder=centos-fs
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="fedora-rootfs.tar.xz"
+tarball="centos-rootfs.tar.xz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
@@ -15,10 +15,12 @@ if [ "$first" != 1 ];then
 			archurl="armhf" ;;
 		amd64)
 			archurl="amd64" ;;
+		i*86)
+			archurl="i386" ;;	
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://raw.githubusercontent.com/EXALAB/LinuxOnAndroid/master/Rootfs/Fedora/${archurl}/fedora-rootfs-${archurl}.tar.xz" -O $tarball
+		wget "https://raw.githubusercontent.com/EXALAB/LinuxOnAndroid/master/Rootfs/Centos/${archurl}/centos-rootfs-${archurl}.tar.xz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
@@ -33,7 +35,7 @@ if [ "$first" != 1 ];then
 	cd "$cur"
 fi
 mkdir -p binds
-bin=start-fedora.sh
+bin=start-centos.sh
 echo "writing launch script"
 cat > $bin <<- EOM
 #!/bin/bash
