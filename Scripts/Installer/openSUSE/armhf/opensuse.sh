@@ -1,36 +1,37 @@
 #!/data/data/com.termux/files/usr/bin/bash
-folder=kali-fs
+folder=opensuse-fs
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="kali-rootfs.tar.gz"
+tarball="opensuse.tar"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
 		case `dpkg --print-architecture` in
 		aarch64)
 			archurl="arm64" ;;
-		arm)
-			archurl="armhf" ;;
 		amd64)
 			archurl="amd64" ;;
-		i*86)
-			archurl="i386" ;;
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Rootfs/Kali/${archurl}/kali-rootfs-${archurl}.tar.gz" -O $tarball
+		wget "https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Rootfs/openSUSE/Leap/${archurl}/openSUSE.tar" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
-	proot --link2symlink tar -xf ${cur}/${tarball}||:
+	proot --link2symlink tar -xf ${cur}/${tarball} --exclude='dev'||:
+	
+	echo "Setting up name server"
+	echo "127.0.0.1 localhost" > etc/hosts
+    echo "nameserver 8.8.8.8" > etc/resolv.conf
+    echo "nameserver 8.8.4.4" >> etc/resolv.conf
 	cd "$cur"
 fi
 mkdir -p binds
-bin=start-kali.sh
+bin=start-opensuse.sh
 echo "writing launch script"
 cat > $bin <<- EOM
 #!/bin/bash
@@ -71,4 +72,4 @@ echo "fixing shebang of $bin"
 termux-fix-shebang $bin
 echo "making $bin executable"
 chmod +x $bin
-echo "You can now launch Kali with the ./${bin} script"
+echo "You can now launch openSUSE with the ./${bin} script"
