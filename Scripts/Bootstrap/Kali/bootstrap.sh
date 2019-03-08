@@ -16,7 +16,7 @@ DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
 #Setup DNS
 echo "127.0.0.1 localhost" > $2/etc/hosts
 echo "nameserver 8.8.8.8" > $2/etc/resolv.conf
-echo "nameserver 8.8.4.4" >> $3/etc/resolv.conf
+echo "nameserver 8.8.4.4" >> $2/etc/resolv.conf
 
 #sources.list setup
 rm $2/etc/apt/sources.list

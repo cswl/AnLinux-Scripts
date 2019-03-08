@@ -11,15 +11,15 @@ fi
 
 #Reduce size
 DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
- LC_ALL=C LANGUAGE=C LANG=C chroot $3 apt-get clean
+ LC_ALL=C LANGUAGE=C LANG=C chroot $2 apt-get clean
 
 #This step is only needed for Ubuntu to prevent Group error
-chroot $3 touch $3/root/.hushlogin
+touch $2/root/.hushlogin
 
 #Setup DNS
 echo "127.0.0.1 localhost" > $2/etc/hosts
 echo "nameserver 8.8.8.8" > $2/etc/resolv.conf
-echo "nameserver 8.8.4.4" >> $3/etc/resolv.conf
+echo "nameserver 8.8.4.4" >> $2/etc/resolv.conf
 
 #sources.list setup
 rm $2/etc/apt/sources.list
