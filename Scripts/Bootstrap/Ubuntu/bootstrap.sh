@@ -14,7 +14,7 @@ DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
  LC_ALL=C LANGUAGE=C LANG=C chroot $3 apt-get clean
 
 #This step is only needed for Ubuntu to prevent Group error
-chroot $3 touch ~/.hushlogin
+chroot $3 touch $3/root/.hushlogin
 
 #Setup DNS
 echo "127.0.0.1 localhost" > $2/etc/hosts
