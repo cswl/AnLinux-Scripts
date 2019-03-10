@@ -13,6 +13,9 @@ fi
 DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
  LC_ALL=C LANGUAGE=C LANG=C chroot $2 apt-get clean
 
+#This step is also needed for BackBox as it is based on Ubuntu Xenial
+touch $2/root/.hushlogin
+
 #Setup DNS
 echo "127.0.0.1 localhost" > $2/etc/hosts
 echo "nameserver 8.8.8.8" > $2/etc/resolv.conf
