@@ -2,8 +2,8 @@
 
 #Get the necessary components
 apt-get update
-apt-get install xfce4-terminal tightvncserver -y
-apt-get install kde-plasma-desktop --no-install-recommends -y
+apt-get install konsole tightvncserver -y
+apt-get install kde-plasma-desktop -y
 
 #Setup the necessary files
 mkdir ~/.vnc
