@@ -2,8 +2,7 @@
 
 #Get the necessary components
 apt-get update
-apt-get install konsole tightvncserver -y
-apt-get install kde-plasma-desktop -y
+apt-get install i3 tightvncserver -y
 
 #Setup the necessary files
 mkdir ~/.vnc
@@ -24,7 +23,7 @@ echo "The VNC Server will be started at 127.0.0.1:5901"
 echo " "
 echo "You can connect to this address with a VNC Viewer you prefer"
 echo " "
-echo "Connect to this address will open a window with Xfce4 Desktop Environment"
+echo "Connect to this address will open a window with i3 Windows Manager"
 echo " "
 echo " "
 echo " "
