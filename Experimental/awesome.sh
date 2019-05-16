@@ -2,7 +2,7 @@
 
 #Get the necessary components
 apt-get update
-apt-get install awesome xinit xserver-xorg tightvncserver -y
+apt-get install i3 tightvncserver -y
 
 #Setup the necessary files
 mkdir ~/.vnc
@@ -37,7 +37,6 @@ echo " "
 echo " "
 
 echo "export DISPLAY=":1"" >> /etc/profile
-echo "awesome" >> ~/.xinitrc
 source /etc/profile
 
 vncserver-start
