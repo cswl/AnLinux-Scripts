@@ -23,7 +23,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://build.nethunter.com/kalifs/kalifs-20190228/kalifs-${archurl}-full.tar.xz" -O $tarball
+		wget "https://build.nethunter.com/kalifs/kalifs-latest/kalifs-${archurl}-full.tar.xz" -O $tarball
 	fi
 	cur=`pwd`
 	echo "Decompressing Rootfs, please be patient."
