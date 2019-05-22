@@ -52,7 +52,7 @@ if [ -n "\$(ls -A alpine-binds)" ]; then
 fi
 command+=" -b /dev"
 command+=" -b /proc"
-command+=" -b alpine-fs/tmp:/dev/shm"
+command+=" -b alpine-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
