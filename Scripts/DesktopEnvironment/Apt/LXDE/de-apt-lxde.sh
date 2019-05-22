@@ -3,6 +3,9 @@
 #Get the necessary components
 apt-get update
 apt-get install lxde-core lxterminal tightvncserver -y
+apt-get remove udisks2 -y
+apt-get install xfe
+apt-get clean
 
 #Setup the necessary files
 mkdir ~/.vnc
