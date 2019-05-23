@@ -4,7 +4,7 @@
 apt-get update
 apt-get install lxqt-core lxqt-config qterminal tightvncserver -y
 apt-get remove udisks2 pcmanfm-qt -y
-apt-get install xfe
+apt-get install xfe -y
 apt-get clean
 
 #Setup the necessary files

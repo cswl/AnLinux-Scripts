@@ -4,7 +4,7 @@
 apt-get update
 apt-get install xfce4 xfce4-terminal tightvncserver -y
 apt-get remove udisks2 thunar -y
-apt-get install xfe
+apt-get install xfe -y
 apt-get clean
 
 #Setup the necessary files

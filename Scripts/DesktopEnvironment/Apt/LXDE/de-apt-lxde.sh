@@ -4,7 +4,7 @@
 apt-get update
 apt-get install lxde-core lxterminal tightvncserver -y
 apt-get remove udisks2 pcmanfm -y
-apt-get install xfe
+apt-get install xfe -y
 apt-get clean
 
 #Setup the necessary files
