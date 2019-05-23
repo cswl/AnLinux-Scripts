@@ -6,6 +6,7 @@ apt-get install xfce4 xfce4-terminal tightvncserver -y
 apt-get remove udisks2 thunar -y
 apt-get install xfe -y
 apt-get clean
+apt-get autoremove -y
 
 #Setup the necessary files
 mkdir ~/.vnc

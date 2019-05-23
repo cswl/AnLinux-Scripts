@@ -6,6 +6,7 @@ apt-get install mate-desktop-environment-core mate-terminal tightvncserver -y
 apt-get remove udisks2 caja -y
 apt-get install xfe -y
 apt-get clean
+apt-get autoremove -y
 
 #Setup the necessary files
 mkdir ~/.vnc
