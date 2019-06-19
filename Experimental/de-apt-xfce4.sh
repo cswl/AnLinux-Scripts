@@ -12,11 +12,11 @@ apt-get clean
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/Apt/Xfce4/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/Apt/Xfce4/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/Apt/Xfce4/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/vncserver-stop -P /usr/local/bin/
 rm -rf /etc/pulse/default.pa
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/Apt/Xfce4/default.pa -P /etc/pulse/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/default.pa -P /etc/pulse/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
