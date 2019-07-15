@@ -23,8 +23,8 @@ echo "nameserver 8.8.4.4" >> $2/etc/resolv.conf
 
 #sources.list setup
 rm $2/etc/apt/sources.list
-echo "deb http://deb.debian.org/debian stretch main contrib non-free" >> $2/etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian stretch main contrib non-free" >> $2/etc/apt/sources.list
+echo "deb http://deb.debian.org/debian buster main contrib non-free" >> $2/etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian buster main contrib non-free" >> $2/etc/apt/sources.list
 
 #tar the rootfs
 cd $2
