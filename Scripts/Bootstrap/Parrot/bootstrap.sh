@@ -23,8 +23,8 @@ echo "nameserver 8.8.4.4" >> $2/etc/resolv.conf
 
 #sources.list setup
 rm $2/etc/apt/sources.list
-echo "deb http://ba.mirror.garr.it/mirrors/parrot stable main contrib non-free" >> $2/etc/apt/sources.list
-echo "deb-src http://ba.mirror.garr.it/mirrors/parrot stable main contrib non-free" >> $2/etc/apt/sources.list
+echo "deb http://ba.mirror.garr.it/mirrors/parrot rolling main contrib non-free" >> $2/etc/apt/sources.list
+echo "deb-src http://ba.mirror.garr.it/mirrors/parrot rolling main contrib non-free" >> $2/etc/apt/sources.list
 #Import the gpg key, this is only required in Parrot Security OS
 wget http://archive.parrotsec.org/parrot/misc/archive.gpg -O $2/etc/apt/trusted.gpg.d/parrot-archive-key.asc
 
