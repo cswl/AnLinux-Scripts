@@ -20,6 +20,7 @@ echo " "
 echo "Connect to this address will open a window with Xfce4 Desktop Environment"
 echo " "
 echo "Before proceeding, please set a password for current user (root)"
+passwd
 echo " "
 echo " "
 echo " "
