@@ -2,7 +2,7 @@
 
 #Get the necessary components
 apk update
-apk add xfce4 xfce4-terminal xrdp -y
+apk add xfce4 xfce4-terminal xrdp
 
 #Setup the necessary files
 echo xfce4-session > ~/.xsession
