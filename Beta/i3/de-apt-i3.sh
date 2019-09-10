@@ -8,7 +8,7 @@ apt-get clean
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/xstartup -P ~/.vnc/
+# wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/vncserver-start -P /usr/local/bin/
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/vncserver-stop -P /usr/local/bin/
 
