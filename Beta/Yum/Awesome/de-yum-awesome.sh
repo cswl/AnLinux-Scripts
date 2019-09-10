@@ -1,16 +1,13 @@
 #!/bin/bash
 
 #Get the necessary components
-apt-get update
-apt-get install openbox tightvncserver -y
-apt-get install xfe -y
-apt-get clean
+yum install awesome tigervnc-server -y
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/openbox/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/openbox/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/openbox/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/vncserver-stop -P /usr/local/bin/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start

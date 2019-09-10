@@ -1,0 +1,3 @@
+#!/bin/bash
+xrdb $HOME/.Xresources
+/etc/X11/Xsession
