@@ -5,9 +5,9 @@ yum install icewm tigervnc-server -y
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/IceWM/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/IceWM/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/IceWM/vncserver-stop -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/IceWM/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/IceWM/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/IceWM/vncserver-stop -P /usr/local/bin/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start

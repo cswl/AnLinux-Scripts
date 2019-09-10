@@ -1,16 +1,13 @@
 #!/bin/bash
 
 #Get the necessary components
-apt-get update
-apt-get install i3-wm tightvncserver -y
-apt-get install xfe -y
-apt-get clean
+yum install icewm tigervnc-server --forcearch=armv7hl -y
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Apt/i3/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Apt/i3/xstartup -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Apt/i3/xstartup -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/arm/IceWM/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/arm/IceWM/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/WindowManager/Yum/arm/IceWM/vncserver-stop -P /usr/local/bin/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
