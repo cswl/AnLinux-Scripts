@@ -5,6 +5,7 @@ yum install awesome tigervnc-server -y
 
 #Setup the necessary files
 mkdir ~/.vnc
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/vncserver-start -P /usr/local/bin/
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/Yum/Awesome/vncserver-stop -P /usr/local/bin/
 
