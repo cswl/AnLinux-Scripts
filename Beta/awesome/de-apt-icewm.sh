@@ -2,15 +2,15 @@
 
 #Get the necessary components
 apt-get update
-apt-get install i3-wm tightvncserver -y
+apt-get install awesome tightvncserver -y
 apt-get install xfe -y
 apt-get clean
 
 #Setup the necessary files
 mkdir ~/.vnc
-# wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/i3/vncserver-stop -P /usr/local/bin/
+#wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/awesome/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/awesome/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Beta/awesome/vncserver-stop -P /usr/local/bin/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
