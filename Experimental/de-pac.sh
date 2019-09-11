@@ -1,17 +1,12 @@
 #!/bin/bash
 
 #Get the necessary components
-apt-get update
-apt-get install icewm tightvncserver -y
-apt-get install xfe -y
-apt-get clean
+pacman -Syu --noconfirm icewm tigervnc
 
 #Setup the necessary files
-mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/Apt/Xfce4/xstartup -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/vncserver-start -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Experimental/vncserver-stop -P /usr/local/bin/
-
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Experimental/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Pacman/vncserver-start -P /usr/local/bin/
+wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Pacman/vncserver-stop -P /usr/local/bin/
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
@@ -25,7 +20,7 @@ echo "The VNC Server will be started at 127.0.0.1:5901"
 echo " "
 echo "You can connect to this address with a VNC Viewer you prefer"
 echo " "
-echo "Connect to this address will open a window with Xfce4 Desktop Environment"
+echo "Connect to this address will open a window with LXDE Desktop Environment"
 echo " "
 echo " "
 echo " "
