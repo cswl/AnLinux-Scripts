@@ -10,7 +10,7 @@ rm /etc/resolv.conf
 mv resolv.conf /etc
 echo "disable-scdaemon" > /etc/pacman.d/gnupg/gpg-agent.conf
 pacman-key --init
-pacman-key --populate archlinux
+pacman-key --populate archlinuxarm
 
 echo "IMPORTANT"
 echo ""
