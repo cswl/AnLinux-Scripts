@@ -30,6 +30,13 @@ bin=start-arch.sh
 echo "writing launch script"
 cat > $bin <<- EOM
 #!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "If you are first time starting Arch Linux, you should run this command: chmod 755 && ./additional.sh , this will fix the pacman-key and network problem."
+echo " "
+echo " "
+echo " "
 cd \$(dirname \$0)
 ## unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
